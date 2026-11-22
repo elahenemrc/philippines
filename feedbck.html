@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #555;
+}
+
+
+
+/* INTRODUCTION */
+
+.hero {
+    background-color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.hero span {
+    color: #bb8296;
+    font-size: 19px;
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    font-weight: normal;
+    color: #765967;
+    margin: 18px 0;
+}
+
+.hero p {
+    color: #897b82;
+    font-size: 19px;
+    line-height: 1.9;
+}
+
+/* FEEDBACK INTRO */
+
+.introduction {
+    max-width: 850px;
+    margin: 50px auto 25px;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.introduction h2 {
+    color: #765967;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.introduction p {
+    color: #888;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+/* FEEDBACK FORM */
+
+.form-container {
+    max-width: 750px;
+    margin: 30px auto 70px;
+    padding: 40px;
+    background-color: white;
+    border: 1px solid #eee1e6;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(150, 110, 125, 0.06);
+}
+
+.form-container h3 {
+    color: #bd8297;
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 23px;
+}
+
+label {
+    display: block;
+    color: #62535a;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #e9dce1;
+    border-radius: 7px;
+    background-color: #fdfafb;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #666;
+    outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #d49aaf;
+    background-color: white;
+}
+
+textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+.rating {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.rating label {
+    font-size: 16px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.rating input {
+    width: auto;
+    accent-color: #c9829b;
+    margin-right: 5px;
+}
+
+.submit-btn {
+    background-color: gray;
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: gray;
+}
+
+/* THANK YOU SECTION */
+
+.thank-you {
+    background-color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.thank-you h2 {
+    font-family: Georgia, serif;
+    color: #765967;
+    font-weight: normal;
+}
+
+.thank-you p {
+    color: #897b82;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+header {
+position: sticky;
+top: 0;
+z-index: 1000;
+background: white;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 10px 30px;
+  background-color: #ffffff;
+}
+
+.logo {
+  height: 70px;
+  width: auto;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 25px;
+}
+
+
+/* NAVIGATION HOVER EFFECT */
+
+nav a {
+    text-decoration: none;
+    color: black;
+    margin-left: 22px;
+    font-size: 14px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Underline animation */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: pink;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.3s ease;
+}
+
+/* Hover effect */
+nav a:hover {
+    color: pink;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+nav a.active::after {
+    width: 100%;
+}
+
+
+
+nav a.active::after {
+    width: 100%;
+}
+
+
+
+/* FOOTER */
+
+        footer {
+            background-color: beige;
+            text-align: center;
+            padding: 20px;
+            line-height: 1.3;
+        }
+
+        footer h2 {
+            color: #A77C78;
+            letter-spacing: 3px;
+        }
+
+        footer a {
+            color: black;
+            text-decoration: none;
+            margin: 5px;
+        }
+
+        footer a:hover {
+            color: #B58D8B;
+        }
+
+
+
+</style>
+</head>
+
+<header class="navbar">
+
+        <img src="file:///C:/Users/HP/Downloads/log.png" width="130" height="100" class="logo">
+
+<nav>
+<a href="file:///C:/Users/HP/Desktop/ELAINE/index.html">Home</a>
+<a href="file:///C:/Users/HP/Desktop/ELAINE/travel%20tips.html">Travel tips</a>
+<a href="file:///C:/Users/HP/Desktop/ELAINE/faqs.html">Faqs</a>
+<a href="file:///C:/Users/HP/Desktop/ELAINE/contact.html">Contact</a>
+
+</nav>
+</header>
+
+
+<section class="hero">
+
+    <span>YOUR THOUGHTS MATTER</span>
+
+    <h1>Share Your Feedback</h1>
+
+    <p>
+        Every experience matters, and every suggestion helps us grow.<br>
+        Let us know how we can make your travel experience better.
+    </p>
+
+</section>
+
+
+<section class="introduction">
+
+    <h2>We Would Love to Hear From You!</h2>
+
+    <p>
+        Thank you for visiting TOURLY, your guide to exploring
+        the beautiful destinations of the Philippines. Your feedback
+        helps us improve our website and provide more useful,
+        informative, and enjoyable travel guides for everyone.
+        Whether you have suggestions, comments, or questions,
+        we would be happy to hear from you.
+    </p>
+
+</section>
+
+
+<div class="form-container">
+
+    <h3>Feedback Form</h3>
+
+    <form action="#" method="post">
+
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name"
+            placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email"
+            placeholder="Enter your email address" required>
+        </div>
+
+        <div class="form-group">
+            <label for="category">What is your feedback about?</label>
+
+            <select id="category" name="category" required>
+                <option value="">Select a category</option>
+                <option>Website Design</option>
+                <option>Travel Information</option>
+                <option>Destination Guides</option>
+                <option>Travel Tips</option>
+                <option>Website Navigation</option>
+                <option>Other Suggestions</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+
+            <label>How would you rate your experience?</label>
+
+            <div class="rating">
+
+                <label>
+                    <input type="radio" name="rating" value="Excellent" required>
+                    Excellent
+                </label>
+
+                <label>
+                    <input type="radio" name="rating" value="Good">
+                    Good
+                </label>
+
+                <label>
+                    <input type="radio" name="rating" value="Average">
+                    Average
+                </label>
+
+                <label>
+                    <input type="radio" name="rating" value="Poor">
+                    Poor
+                </label>
+
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="message">Your Comments and Suggestions</label>
+
+            <textarea id="message" name="message"
+            placeholder="Share your thoughts, suggestions, or experience..."
+            required></textarea>
+
+        </div>
+
+        <button type="submit" class="submit-btn">
+            SUBMIT FEEDBACK
+        </button>
+
+    </form>
+
+</div>
+
+
+<section class="thank-you">
+
+    <h2>Thank You for Sharing!</h2>
+
+    <p>
+        Your opinions and suggestions are valuable to us.
+        Together, let's make exploring the Philippines
+        a more wonderful experience.
+    </p>
+
+</section>
+<footer>
+
+       
+        <p>PHILIPPINES TRAVEL GUIDE</p>
+        <p>&copy; 2026 TOURLY. All Rights Reserved.</p>
+
+    </footer>
+
+
+
+
+</body>
+</html>

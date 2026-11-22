@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+   
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color:white;
+            color: #555555;
+        }
+
+       
+        
+        
+        /* INTRODUCTION */
+
+        .intro {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: white;
+        }
+
+        .intro h2 {
+            color: #cc829c;
+            font-size: 30px;
+        }
+
+        .intro p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        
+        /* TIP CARDS */
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .card {
+            background-color: white;
+            width: 200px;
+            padding: 10px;
+            border-radius: 15px;
+            border: 1px solid #efd5df;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px #e6cbd5;
+        }
+
+        .card img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .card h3 {
+            color: #c77f99;
+        }
+
+        .card p {
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        /* TRAVEL GUIDE */
+
+        .guide {
+            background-color: white;
+            padding: 40px;
+            margin: 30px 7%;
+            border-radius: 15px;
+        }
+
+        .guide h2 {
+            text-align: center;
+            color: gray;
+        }
+
+        .guide li {
+            padding: 10px;
+            line-height: 1.6;
+        }
+
+        /* IMPORTANT REMINDERS */
+
+        .reminders {
+            background-color: white;
+            margin: 40px 7%;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #efd5df;
+        }
+
+        .reminders h2 {
+            color: gray;
+            text-align: center;
+        }
+
+        details {
+            background-color: white;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        summary {
+            color: #9f6379;
+            font-weight: bold;
+        }
+
+        details p {
+            line-height: 1.7;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background-color: #e8dce1;
+            text-align: center;
+            padding: 25px;
+            color: #666666;
+        }
+
+
+header {
+position: sticky;
+top: 0;
+z-index: 1000;
+background: white;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 10px 30px;
+  background-color: #ffffff;
+}
+
+.logo {
+  height: 70px;
+  width: auto;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 25px;
+}
+
+
+/* NAVIGATION HOVER EFFECT */
+
+nav a {
+    text-decoration: none;
+    color: black;
+    margin-left: 22px;
+    font-size: 14px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Underline animation */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: pink;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.3s ease;
+}
+
+/* Hover effect */
+nav a:hover {
+    color: pink;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+nav a.active::after {
+    width: 100%;
+}
+
+/* FOOTER */
+
+        footer {
+            background-color: beige;
+            text-align: center;
+            padding: 20px;
+            line-height: 1.3;
+        }
+
+        footer h2 {
+            color: #A77C78;
+            letter-spacing: 3px;
+        }
+
+        footer a {
+            color: black;
+            text-decoration: none;
+            margin: 5px;
+        }
+
+        footer a:hover {
+            color: #B58D8B;
+        }
+
+
+
+
+    </style>
+</head>
+ <header class="navbar">
+
+        <img src="file:///C:/Users/HP/Downloads/log.png" width="130" height="100" class="logo">
+
+<nav>
+<a href="file:///C:/Users/HP/Desktop/ELAINE/index.html">Home</a>
+
+<a href="file:///C:/Users/HP/Desktop/ELAINE/faqs.html">Faqs</a>
+<a href="file:///C:/Users/HP/Desktop/ELAINE/feedbck.html">Feedback</a>
+<a href="file:///C:/Users/HP/Desktop/ELAINE/contact.html">Contact</a>
+
+</nav>
+</header>
+
+    
+    <div class="intro">
+       
+        <p>
+            Every journey becomes more memorable when you are
+            well-prepared. Discover helpful travel tips, essential
+            reminders, and practical guides to make your adventures
+            more comfortable, safe, and enjoyable.
+        </p>
+    </div>
+
+   
+
+        <div class="container">
+
+            <div class="card">
+                <img src="file:///C:/Users/HP/Downloads/tyk.jpg">
+                <h3>01. Pack Wisely</h3>
+                <p>
+                    Bring only the essentials. Prepare comfortable
+                    clothes, toiletries, and important travel items
+                    to avoid carrying unnecessary luggage.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="file:///C:/Users/HP/Downloads/rtj.jpg">
+                <h3>02. Plan Your Budget</h3>
+                <p>
+                    Set a travel budget before your trip.
+                    Include transportation, accommodation, food,
+                    entrance fees, and emergency expenses.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="file:///C:/Users/HP/Downloads/ouj.jpg">
+                <h3>03. Stay Safe</h3>
+                <p>
+                    Keep your valuables secure, stay aware of your
+                    surroundings, and always save emergency
+                    contact information.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="file:///C:/Users/HP/Downloads/re.jpg">
+                <h3>04. Capture Memories</h3>
+                <p>
+                    Take pictures of beautiful places and special
+                    moments. Remember to enjoy the experience
+                    instead of focusing only on photographs.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="file:///C:/Users/HP/Downloads/dd.jpg">
+                <h3>05. Research Your Destination</h3>
+                <p>
+                    Learn about the destination, local culture,
+                    weather, transportation, and attractions
+                    before visiting.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="file:///C:/Users/HP/Downloads/hg.jpg">
+                <h3>06. Prepare Documents</h3>
+                <p>
+                    Always bring your valid identification,
+                    tickets, booking confirmations, and other
+                    necessary travel documents.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+       <div class="guide">
+
+        <h2>Your Simple Travel Guide</h2>
+
+        <ol>
+            <li><b>Choose Your Destination</b> – Decide where
+            you want to go and research its attractions.</li>
+
+            <li><b>Set Your Travel Dates</b> – Choose a suitable
+            schedule and check the weather.</li>
+
+            <li><b>Book Your Accommodation</b> – Find a safe
+            and comfortable place to stay.</li>
+
+            <li><b>Plan Your Itinerary</b> – Organize the places
+            you want to visit and the activities you want to try.</li>
+
+            <li><b>Prepare Your Belongings</b> – Pack your
+            essentials and double-check your documents.</li>
+
+            <li><b>Enjoy Your Journey!</b> – Explore responsibly,
+            respect local communities, and create wonderful memories.</li>
+        </ol>
+
+    </div>
+
+        <div class="reminders">
+
+        <h2>Travel Reminders</h2>
+
+        <details>
+            <summary>What should I bring when traveling?</summary>
+            <p>
+                Bring clothes, toiletries, identification,
+                cash, medications if needed, chargers, and
+                other personal essentials.
+            </p>
+        </details>
+
+        <details>
+            <summary>How can I save money during a trip?</summary>
+            <p>
+                Set a budget, compare accommodation prices,
+                use affordable transportation, and plan
+                your meals ahead of time.
+            </p>
+        </details>
+
+        <details>
+            <summary>Why should I research my destination?</summary>
+            <p>
+                Research helps you understand local customs,
+                transportation options, weather conditions,
+                and important safety information.
+            </p>
+        </details>
+
+        <details>
+            <summary>How can I become a responsible traveler?</summary>
+            <p>
+                Respect local traditions, avoid littering,
+                protect nature, and support local businesses.
+            </p>
+        </details>
+
+    </div>
+
+ <footer>
+
+       
+        <p>PHILIPPINES TRAVEL GUIDE</p>
+        <p>&copy; 2026 TOURLY. All Rights Reserved.</p>
+
+    </footer>
+ </body>
+</html>

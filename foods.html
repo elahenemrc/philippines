@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<style>
+
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+text-align: center;
+
+}
+
+
+h1 {
+    text-align: center;
+    color: #88717c;
+    letter-spacing: 3px;
+}
+
+.intro {
+    text-align: center;
+    color: #999999;
+}
+
+/* TABLE */
+table {
+    width: 80%;
+margin: 0 auto;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 15px;
+
+}
+
+/* LANDSCAPE BOX */
+td {
+    width: 15%;
+    background-color: white;
+    border: 1px solid #eadce2;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+/* PHOTO AND INFORMATION SIDE BY SIDE */
+.card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* PHOTO LEFT */
+.card img {
+    width: 35%;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* INFORMATION RIGHT */
+.details {
+    width: 55%;
+}
+
+.details h3 {
+    color: #88717c;
+    font-size: 13px;
+    margin: 3px 0;
+}
+
+.details p {
+    color: black;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.details a {
+    display: inline-block;
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+    padding: 6px 8px;
+    border-radius: 15px;
+    font-size: 9px;
+}
+
+.details a:hover {
+    background-color: gray;
+}
+
+td:hover {
+    background-color: white;
+    transition: 0.3s;
+}
+
+.gray-button {
+    display: inline-block;
+    background-color: #808080;
+    color: white;
+    padding: 8px 23px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    border: 1px solid #696969;
+    transition: 0.3s;
+}
+
+.gray-button:hover {
+    background-color: #555555;
+    transform: translateY(-3px);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<p class="intro">Food is the purest expression of our heritage. Passed down through generations in handwritten notes and busy kitchens, the flavors of [Insert Culture / Region Name] reflect our land, our history, and our love for gathering together. Explore the traditional ingredients, time-honored cooking methods, and cherished recipes that keep our table alive.
+</p>
+<table>
+
+<tr>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/DOBO.jpg">
+<div class="details">
+<h3>ADOBO</h3>
+<p> Meat cooked in soy sauce, vinegar, garlic, and bay leaves. Considered the national dish.
+</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/SINIG.jpg">
+<div class="details">
+<h3>SINIGANG</h3>
+<p>A sour soup made with tamarind, pork, shrimp, or fish, with vegetables.
+</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/LECHON.jpg">
+<div class="details">
+<h3>LECHON</h3>
+<p>Whole roasted pig with crispy skin, served at fiestas and big celebrations.
+</p>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/HALO.jpg">
+<div class="details">
+<h3>HALO-HALO</h3>
+<p>Crushed ice dessert with milk, beans, jellies, ube, leche flan, and ice cream.
+</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/BOODLE.jpg">
+<div class="details">
+<h3>BOODLE FIGHT</h3>
+<p>A communal meal served on banana leaves where everyone eats with their hands.
+</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/LUMP.jpg">
+<div class="details">
+<h3>LUMPIA</h3>
+<p>Filipino spring rolls, either fresh or fried, filled with meat and vegetables.
+</p>
+</div>
+</div>
+</td>
+</tr>
+
+
+<tr>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/PANCIT.jpg">
+<div class="details">
+<h3>PANCIT</h3>
+<p> Noodles served for long life, especially during birthdays and celebrations.
+</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/SISI.jpg">
+<div class="details">
+<h3>SISIG</h3>
+<p>Sizzling chopped pork face and ears with calamansi, chili, and egg.
+</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/KARE.jpg">
+<div class="details">
+<h3>KARE-KARE</h3>
+<p>Oxtail stew in thick peanut sauce, usually eaten with bagoong.
+</p>
+</div>
+</div>
+</td>
+</tr>
+
+
+<tr>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/BULA.jpg">
+<div class="details">
+<h3>BULALO</h3>
+<p>Beef shank soup with bone marrow, corn, and cabbage.
+</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/KINI.jpg">
+<div class="details">
+<h3>KINILAW</h3>
+<p>Raw fish cured in vinegar and calamansi, like Filipino ceviche.
+</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/BIVOL.jpg">
+<div class="details">
+<h3>BICOL EXPRESS</h3>
+<p>Spicy pork cooked in coconut milk, chili, and shrimp paste.
+</p>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/PATA.jpg">
+<div class="details">
+<h3>CRISPY PATA</h3>
+<p>Deep-fried pork leg with super crispy skin.
+</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/CHICHARON.jpg">
+<div class="details">
+<h3>CHICHARON</h3>
+<p>Crispy pork cracklings, a popular pulutan and snack.
+</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/BALUT.jpg">
+<div class="details">
+<h3>BALUT</h3>
+<p>A fertilized duck egg, a famous street food challenge for visitors.
+</p>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/TAHO.jpg">
+<div class="details">
+<h3>TAHO</h3>
+<p>Warm silken tofu with arnibal syrup and sago pearls, sold by street vendors.
+</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/BIBNGKA.jpg">
+<div class="details">
+<h3>BIBINGKA</h3>
+<p>Rice cake cooked in banana leaves, popular during Christmas.
+</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/BUMBONG.jpg">
+<div class="details">
+<h3>PUTO BUMBONG</h3>
+<p>Purple rice cake steamed in bamboo tubes, also a Christmas favorite.
+</p>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/LECHE%20FLAN.jpg">
+<div class="details">
+<h3>LECHE FLAN</h3>
+<p>A rich and creamy caramel custard dessert.
+</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/CHICKEN%20INASAL.jpg">
+<div class="details">
+<h3>CHICKEN INASAL</h3>
+<p>Grilled chicken marinated in calamansi and annatto
+</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/TURON.jpg">
+<div class="details">
+<h3>TURON</h3>
+<p>Fried banana spring roll with sugar and jackfruit.
+</p>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/PALABOK.jpg">
+<div class="details">
+<h3>PALABOK</h3>
+<p>Rice noodles with shrimp sauce, tinapa, and egg
+</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/PINAKBET.jpg">
+<div class="details">
+<h3>PINAKBET</h3>
+<p>Mixed vegetables with bagoong
+</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/CALDERETA.jpg">
+<div class="details">
+<h3>CALDERETA</h3>
+<p>Beef or goat stew in tomato sauce
+</p>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/AFRITADA.jpg">
+<div class="details">
+<h3>AFRITADA</h3>
+<p>Chicken or pork stewed in tomato sauce with potatoes
+</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/MENUDO.jpg">
+<div class="details">
+<h3>MENUDO</h3>
+<p>Pork stew with tomato, liver, potatoes, and carrots
+</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/TINOLA.jpg">
+<div class="details">
+<h3>TINOLA</h3>
+<p>Ginger chicken soup with papaya or sayote	
+</p>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/ISAW.jpg">
+<div class="details">
+<h3>ISAW</h3>
+<p>Grilled chicken or pork intestines on a stick
+</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/KWEKWKE.jpg">
+<div class="details">
+<h3>KWEK-KWEK</h3>
+<p>Orange-battered quail eggs</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/ARROZCALDO.jpg">
+<div class="details">
+<h3>ARROZ CALDO</h3>
+<p>Comforting ginger and garlic chicken-rice porridge.</p>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/TALONG.jpg">
+<div class="details">
+<h3>TORTANG TALONG</h3>
+<p>Eggplant omelet.</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/SINAAG.jpg">
+<div class="details">
+<h3>SINANGAG</h3>
+<p>Garlic-infused fried rice.</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/DINUGUAN.jpg">
+<div class="details">
+<h3>DINUGUAN</h3>
+<p>Savory pork stew cooked in a rich, dark gravy of pig's blood, vinegar, and garlic.</p>
+</div>
+</div>
+</td>
+</tr>
+
+
+<tr>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/NECHADO.jpg">
+<div class="details">
+<h3>MECHADO</h3>
+<p>Braised beef chunks in a tangy tomato and soy sauce broth with potatoes and carrots.</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/POCHERO.jpg">
+<div class="details">
+<h3>POCHERO</h3>
+<p>Hearty meat stew cooked with ripe saba bananas, cabbage, and tomato sauce.
+</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/BATCHOY.jpg">
+<div class="details">
+<h3>BATCHOY</h3>
+<p>Savory noodle soup from Iloilo topped with pork organs, crushed chicharon, and a raw egg.</p>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/SOPAS.jpg">
+<div class="details">
+<h3>SOPAS</h3>
+<p>Creamy macaroni soup made with chicken, hotdogs, vegetables, and evaporated milk.</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/BANANA.jpg">
+<div class="details">
+<h3>BANANACUE</h3>
+<p>Deep-fried saba bananas coated in caramelized brown sugar on a bamboo skewer.
+</p>
+</div>
+</div>
+</td>
+
+<td>
+<div class="card">
+<img src="file:///C:/Users/HP/Downloads/MAJA.jpg">
+<div class="details">
+<h3>MAJA BLANCA</h3>
+<p>Creamy coconut pudding topped with sweet corn kernels and toasted coconut.
+</p>
+</div>
+</div>
+</td>
+</tr>
+
+
+</table>
+
+</div>
+<a href="file:///C:/Users/HP/Desktop/ELAINE/index.html#culture" class="gray-button">
+   back
+</a>
+</body>
+</html>
+

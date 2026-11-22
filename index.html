@@ -1,0 +1,1956 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+    
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background-color: white;
+            color: #59483F;
+            font-family: Georgia, serif;
+        }
+
+        /* HEADER */
+
+        header {
+            background-color: #FFFDFB;
+            text-align: center;
+            padding: 10px;
+        }
+
+        header h1 {
+            color: #B58D8B;
+            font-size: 30px;
+            letter-spacing: 7px;
+            
+        }
+
+        header p {
+            font-size: 15px;
+            letter-spacing: 3px;
+        }
+
+header {
+position: sticky;
+top: 0;
+z-index: 1000;
+background: white;
+}
+        /* HOME BACKGROUND */
+
+        .home {
+            background-image:
+            linear-gradient(rgba(40,30,25,0.35),
+            rgba(40,30,25,0.35)),
+            url("file:///C:/Users/HP/Downloads/b.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            min-height: 570px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .home h2 {
+            font-size: 38px;
+            letter-spacing: 1px;
+        }
+
+        .home p {
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .home a {
+            display: inline-block;
+            background-color: #B58D8B;
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .home a:hover {
+            background-color: #8E6968;
+            transform: translateY(-3px);
+        }
+
+        /* GENERAL SECTIONS */
+
+        section {
+            padding: 50px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #A77C78;
+            font-size: 25px;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            color: #89776D;
+            margin-bottom: 35px;
+        }
+
+        /* ABOUT */
+
+        .about-box {
+            background-color: #FFFDFB;
+            border: 1px solid #E5D0C5;
+            padding: 30px;
+            line-height: 1.9;
+                   }
+
+        /* DESTINATIONS */
+
+        .destination {
+            display: inline-block;
+            width:300px;
+            background-color: #FFFDFB;
+            border: 1px solid #E5D0C5;
+            margin: 10px;s
+            padding: 10px;
+            vertical-align: top;
+            transition: 0.3s;
+                    }
+
+        .destination:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(100,70,50,0.15);
+        }
+
+        .destination img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+
+        .destination img:hover {
+            transform: scale(1.03);
+        }
+
+        .destination h3 {
+            color: #A77C78;
+        }
+
+        .destination p {
+            line-height: 1.2;
+        }
+
+        .destination a {
+            display: inline-block;
+            background-color: #EADBD2;
+            color: #59483F;
+            padding: 0px 5px;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .destination a:hover {
+            background-color: #B58D8B;
+            color: white;
+        }
+
+                /* TRAVEL INSPIRATION */
+
+        .inspiration {
+            background-color: #FFFDFB;
+            padding: 90px 20px;
+            color: #A77C78;
+            text-align: center;
+        }
+
+        .inspiration h2 {
+            color:#A77C78;
+            font-size: 35px;
+        }
+
+        .inspiration p {
+            line-height: 1.8;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background-color:beige;
+            text-align: center;
+            padding: 20px;
+            line-height: 1.3;
+        }
+
+        footer h2 {
+            color: #A77C78;
+            letter-spacing: 3px;
+        }
+
+        footer a {
+            color: black;
+            text-decoration: none;
+            margin: 5px;
+        }
+
+        footer a:hover {
+            color: #B58D8B;
+        }
+
+        /* DESTINATION CAROUSEL */
+        .carousel {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 15px 5px 25px;
+            scroll-snap-type: x mandatory;
+        }
+
+        .carousel .destination {
+            flex: 0 0 300px;
+            margin: 10px 0;
+            scroll-snap-align: start;
+        }
+
+        .carousel-buttons {
+            text-align: center;
+            margin: 10px 0 30px;
+        }
+
+        .carousel-buttons button {
+            background-color: #B58D8B;
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            margin: 5px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            border-radius: 20px;
+        }
+
+        .carousel-buttons button:hover {
+            background-color: #8E6968;
+        }
+
+        .carousel::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .carousel::-webkit-scrollbar-thumb {
+            background-color: #D7B8B0;
+            border-radius: 10px;
+        }
+
+.navbar {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 10px 30px;
+  background: white;
+}
+
+.logo {
+  height: 70px;
+  width: auto;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 25px;
+}
+
+
+/* NAVIGATION HOVER EFFECT */
+
+nav a {
+    text-decoration: none;
+    color: #777777;
+    margin-left: 22px;
+    font-size: 14px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Underline animation */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #e9aebb;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.3s ease;
+}
+
+/* Hover effect */
+nav a:hover {
+    color: #e9aebb;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Active page */
+nav a.active {
+    color: #e9aebb;
+}
+
+nav a.active::after {
+    width: 100%;
+}
+
+
+
+
+
+    </style>
+<body>
+
+        <header class="navbar">
+
+        <img src="file:///C:/Users/HP/Downloads/log.png" width="130" height="100" class="logo">
+
+<nav>
+<a href="file:///C:/Users/HP/Desktop/ELAINE/travel%20tips.html">Travel tips</a>
+<a href="file:///C:/Users/HP/Desktop/ELAINE/faqs.html">Faqs</a>
+<a href="file:///C:/Users/HP/Desktop/ELAINE/feedbck.html">Feedback</a>
+<a href="file:///C:/Users/HP/Desktop/ELAINE/contact.html">Contact</a>
+
+</nav>
+</header>
+         </header>
+
+  
+    
+        <div class="home" id="home">
+
+        <div>
+<p>WHERE THE PACIFIC HOLD IT'S BREATH</p>
+
+
+  <h2>Discover the Beauty of the Philippines</h2>
+
+           
+            <a href="#destinations">EXPLORE DESTINATIONS</a>
+
+        </div>
+
+    </div>
+
+        <section id="about">
+
+        <div class="about-box">
+
+            <h2>ABOUT TOURLY</h2>
+
+            <p>
+                Welcome to Tourly, your travel guide to discovering
+                the beautiful islands of the Philippines.
+
+                Our goal is to help travelers explore amazing
+                destinations, learn about different cultures,
+                and experience unforgettable journeys.
+            
+            
+                From breathtaking beaches to peaceful mountains,
+                Tourly inspires you to explore the wonders of
+                the Philippines and create meaningful memories.
+            </p>
+
+        </div>
+
+    </section>
+
+    
+    <section id="destinations">
+
+        <h2>First Philippine adventure? Start with these
+</h2>
+
+        <p class="subtitle">
+            
+Let's map it out together. Neon cities, sacred temples, and secret beaches.
+ Explore top-rated escapes, insider tips, and hidden gems. Where will you go next?
+        Find your next destination and start your journey.
+
+<center>
+        <font color="pink" size="7">●</font>
+        <font color="gray" size="6">●</font>
+        <font color="brown" size="5">●</font>
+        <font color="Gray" size="7">
+            Luzon Features
+        </font>
+
+        <br><br>
+
+           </center>
+    <div class="carousel" id="luzonCarousel">
+
+    <div class="destination">
+        
+
+            <img src="file:///C:/Users/HP/Downloads/1.jpg">
+
+            <h3>SAN AGUSTIN MUSEUM</h3>
+
+            <p>religious artifacts, paintings, and exhibits that showcase the Philippines' Spanish colonial history.
+                           </p>
+
+            <a href="https://share.google/NJUDGhkPYy7CnkHVI">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/Giant%20Clam%20Sanctuary%20Diving.jpg">
+
+            <h3>GIANT CLAM SANCTUARY</h3>
+
+            <p> Home to thousands of giant clams in a protected marine garden.
+                           </p>
+
+            <a href="https://share.google/8pw0lbszPClO1T1xm">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/2.jpg">
+
+            <h3>PASIG RIVER ESPLANADE</h3>
+
+            <p>riverside destination where visitors can enjoy scenic views, take pictures, walk along the river.
+                           </p>
+
+            <a href="https://share.google/yHdWyoio4p4XdbwiG">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/Naked%20Island.jpg">
+
+            <h3>NAKED ISLAND</h3>
+
+            <p>A bare sandbar with powdery white sand and no trees or structures.                           </p>
+
+            <a href="https://share.google/t0avE7vO5SogkspIn">
+                EXPLORE MORE
+            </a>
+
+        </div>
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/CLOUD%209%20TOWER.jpg">
+
+            <h3>CLOUD 9 TOWER</h3>
+
+            <p> The country’s premier surfing break with its iconic wooden boardwalk.                          </p>
+
+            <a href="https://share.google/6yZBG8IK9DntY8uPm">
+                EXPLORE MORE
+            </a>
+
+        </div>
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/Monastery%20of%20Transfiguration.jpg">
+
+            <h3>MOASTERY OF THE TRANSFIGURATION</h3>
+
+            <p> A serene pyramid-shaped Benedictine monastery surrounded by tranquil gardens.
+                          </p>
+
+            <a href="https://share.google/6Uut2labiGYZqJJ5e">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/Crocodile%20park,.jpg">
+
+            <h3>CROCODILE PARK</h3>
+
+            <p> A zoological park housing crocodiles, tigers, and exotic wildlife.                          </p>
+
+            <a href="https://share.google/w85nxAnk5T5Vpfygk">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/3.jpg">
+
+            <h3>MINES VIEW PARK</h3>
+
+            <p>famous for its beautiful mountain scenery and overlooking views of the surrounding valleys.
+                           </p>
+
+            <a href="https://share.google/jSnJYVzSY0XnNZBBt">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/4">
+
+            <h3>THE MIND MUSEUM</h3>
+
+            <p>a science museum featuring interactive exhibits about space, nature, technology, and the human body.
+                           </p>
+
+            <a href="https://share.google/KYblb03NOImeTcgVq">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/5.jpg">
+
+            <h3>ART IN ISLAND</h3>
+
+            <p>Interactive art museum where visitors take creative photographs with colorful 3D paintings and optical illusions.
+                           </p>
+
+            <a href="https://share.google/VkstSby8Vh96s98F9">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/6.jpg">
+
+            <h3>TAGAYTAY PARK</h3>
+
+            <p>known for its cool weather, beautiful landscapes, and views of Taal Volcano and Taal Lake.
+                           </p>
+
+            <a href="https://share.google/poXm9N9Cnc1AjIHh0">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/7.jpg">
+
+            <h3>ZOOBIC SAFARI</h3>
+
+            <p>a wildlife adventure park where visitors can see different animals, including tigers and crocodiles.
+                           </p>
+
+            <a href="https://share.google/xlMdvqYrFEJQcJu6A">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/8.jpg">
+
+            <h3>CLOUD 9 ANTIPOLO</h3>
+
+            <p>famous for its hanging bridge and 360-degree viewing deck.
+                           </p>
+
+            <a href="https://share.google/NqED4xrVtAc47btWM">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/9.jpg">
+
+            <h3>MASUNGI GEORESERVE</h3>
+
+            <p>a nature conservation area known for its limestone formations, hanging trails, rope structures, and beautiful rainforest scenery.
+                           </p>
+
+            <a href="https://share.google/ubEiz0g9cr7LGBbau">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/BACUIT%20BAY.jpg">
+
+            <h3>BACUIT BAY</h3>
+
+            <p> Regularly topping global lists as one of the most beautiful beach destinations on Earth.
+</p>
+
+            <a href="https://share.google/1G0BL4uWdu9GJzyPj">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/10.jpg">
+
+            <h3>SAN AGUSTIN CHURCH</h3>
+
+            <p>the oldest stone church in the Philippines and a UNESCO World Heritage Site.
+                           </p>
+
+            <a href="https://share.google/WZI1X44XKx35B100n">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/11.jpg">
+
+            <h3>MANILA OCEAN PARK</h3>
+
+            <p>a marine-themed attraction where visitors can discover different sea creatures.
+                           </p>
+
+            <a href="https://maps.app.goo.gl/XuTvYBJymZQ5HPrH9 C">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/1111112.jpg">
+
+            <h3>ENCHANTED KINGDOM</h3>
+
+            <p>one of the Philippines' well-known theme parks, offering exciting rides, entertaining attractions, and fun activities.
+                           </p>
+
+            <a href="https://maps.app.goo.gl/96BPYSuPVx8ByBNX6">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/COROM.jpg">
+
+            <h3>CORON ISLAND</h3>
+
+            <p>  World-famous WWII Japanese shipwreck diving sites scattered across the bay.
+                         </p>
+
+            <a href="https://share.google/MxfkOjfwsdBdDwInm">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/13.jpg">
+
+            <h3>MOUNT PINATUBO</h3>
+
+            <p>famous for its 1991 volcanic eruption and its beautiful crater landscape.
+                           </p>
+
+            <a href="https://share.google/3FcrQTwoJ9P81Lmsm">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/I.jpg">
+
+            <h3>CAPE INGANO LIGHTHOUSE</h3>
+
+            <p> A historic, late 19th-century Spanish colonial lighthouse perched dramatically on a cliff. 
+                           </p>
+
+            <a href="https://maps.app.goo.gl/8H1cmgEyuzVoiUUHA">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/Nagtabon%20Beach_%20%20&%20Palm-Fringed%20Bay.jpg">
+
+            <h3>NAGTABON BEACH</h3>
+
+            <p>A massive, scenic crescent of golden sand and rolling surf.                           </p>
+
+            <a href="https://share.google/4YWg8XS88NEAxrqhA">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/NH.jpg">
+
+            <h3>MATUKAD ISLAND</h3>
+
+            <p>Featuring fine white sand, a lush tropical backdrop, and towering jagged karst limestone cliffs.
+                           </p>
+
+            <a href="https://share.google/nuS5AtZPpj5X7bUt3">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/G,.jpg">
+
+            <h3>SUBTERRANEAN RIVER</h3>
+
+            <p>UNESCO World Heritage Site and one of the New 7 Wonders of Nature. 
+                           </p>
+
+            <a href="https://maps.app.goo.gl/4AS8CjLTNtQh8JJt7">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/Apo%20Ref.jpg">
+
+            <h3>APO REEF</h3>
+
+            <p> the second-largest contiguous coral reef system in the world                           </p>
+
+            <a href="https://share.google/bDGn8alZcG91ybpMw">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+
+
+
+        <div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/vigan.jpg" alt="Vigan">
+
+            <h3>VIGAN</h3>
+
+            <p>
+                A cobblestone street completely closed to motorized vehicles, lined with grand, Spanish-era ancestral homes.
+            </p>
+
+            <a href="https://share.google/2EWyniYJqNS0pArks">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+        <div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/las%20casas.jpg" alt="las casas">
+
+            <h3>LAS CASAS</h3>
+
+            <p>
+                A unique living museum and luxury heritage beach resort that showcases reconstructed 18th and 19th-century Philippine history.
+            </p>
+
+            <a href="https://share.google/1A5VzJayD8kOZAqb5">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+        <div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/baguio.jpg" alt="baguio">
+
+            <h3>BAGUIO</h3>
+
+            <p>
+               located in the landlocked province of Benguet, nestled high up in the Cordillera Central mountain range of northern Luzon.
+            </p>
+
+            <a href="https://share.google/hlkOJMSj0xI5ndN3j">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/myon.jpg" alt="Mt. mayon">
+
+            <h3>MT. MAYON</h3>
+
+            <p>
+Mayon is world-famous for possessing the most symmetrical, near-perfect conical shape of any volcano on Earth.
+                           </p>
+
+            <a href="https://share.google/dfetmhLg7nCbkwuWT">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/banaue.jpg
+" alt="banaue">
+
+            <h3>BANAUE</h3>
+
+            <p>
+Hand-built by the ancestors of the Indigenous Ifugao people using only basic tools. known as eight wonder of the world.
+                           </p>
+
+            <a href="https://share.google/HrrRXYIbjujrqT2GS">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/patapt.jpg" alt="Patapat">
+
+            <h3>PATAPAT</h3>
+
+            <p>
+               The viaduct is a massive engineering masterpiece and a favorite sightseeing spot for several reasons.  
+ </p>
+
+            <a href="https://share.google/JOYSvWKhWkAofzzLd">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/PAOAY.jpg" alt="Paoay">
+
+            <h3>PAOAY</h3>
+
+            <p>A massive centuries-old belfry located in the middle of downtown Laoag. It is slowly sinking into the ground. 
+                           </p>
+
+            <a href="https://share.google/Dow6erbXZj4VlGRYr">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/BATANES.jpg" alt="batanes">
+
+            <h3>BATANES</h3>
+
+            <p>
+             six-story tower features a traditional rubble-masonry base modeled after indigenous Ivatan stone houses. </p>
+
+            <a href="https://share.google/tl0A3zcrQHY8y4Ogn">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<br><br>
+</div>
+<br><br>
+<center>
+<br><br>
+
+
+        <font color="pink" size="7">●</font>
+        <font color="gray" size="6">●</font>
+        <font color="brown" size="5">●</font>
+        <font color="Gray" size="7">
+            Visayas Features
+        </font>
+
+        <br><br>
+
+           </center>
+<div class="carousel" id="visayasCarousel">
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/OSMENA%20PEAK.jpg">
+
+            <h3>OSMENA PEAK</h3>
+
+            <p>he highest point in Cebu (1,013 meters) located in Dalaguete                           </p>
+
+            <a href="https://share.google/cM4knao1CVlgVjems">
+                EXPLORE MORE
+            </a>
+
+        </div>
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/Sirao%20Flower%20Garden.jpg">
+
+            <h3>SIRAO FLOWER GARDEN</h3>
+
+            <p>Often called the "Little Amsterdam of Cebu                           </p>
+
+            <a href="https://share.google/YPIrdL7SRKT8nx9EG">
+                EXPLORE MORE
+            </a>
+
+        </div>
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/Bantayan%20Island_.jpg">
+
+            <h3>BANTAYAN ISLAND</h3>
+
+            <p>A paradise off the northern tip of Cebu loved for its laid-back vibe, wide white sand beaches                           </p>
+
+            <a href="https://share.google/uJOySKtDH29rON77G">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/KASARORO.jpg">
+
+            <h3>CASARORO FALLS</h3>
+
+            <p>Tucked away in the mountains of Valencia, this narrow but incredibly powerful single-drop waterfall plunges 100 feet down a sheer rock cliff.                           </p>
+
+            <a href="https://share.google/c2A0VWvoFwbYmnC3S">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+
+
+
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/juanico.jpg">
+
+            <h3>SAN JUANICO BRIDGE</h3>
+
+            <p>one of the longest and most iconic bridges in the Philippines. 
+                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/Pescador%20islnd.jpg">
+
+            <h3>PESCADOR ISLAND</h3>
+
+            <p>A tiny coral island in Moalboal known for its underwater recreational diving activities, specifically the spectacular sardine run. 
+                           </p>
+
+            <a href="https://share.google/dn9azt81tPR8BnjAV">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/Hinagdanan%20Cave.jpg">
+
+            <h3>HINAGDANAN CAVE</h3>
+
+            <p> A naturally lit limestone cave in Dauis featuring dramatic stalactites and a deep, emerald-green underground swimming pool.
+                           </p>
+
+            <a href="https://share.google/L2rGUUBCxxkdW2Bz1">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/Danao%20Adventure%20Park.jpg">
+
+            <h3>DANAO ADVENTURE PARK</h3>
+
+            <p> An eco-tourism hub catering to thrill-seekers with extreme sports like canyon swings, ziplining, and root climbing over deep gorges.
+
+                           </p>
+
+            <a href="https://share.google/7l74o1znxTfbtZ5Oh">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/Miag-ao%20church.jpg">
+
+            <h3>MIAG AO CHURCH</h3>
+
+            <p> World Heritage site in Iloilo celebrated for its striking yellow-ochre sandstone facade featuring elaborate carvings of a coconut tree and local folklore.
+
+                           </p>
+
+            <a href="https://share.google/RdfhSqJ3rIpVUkJhz">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/Calle%20Real.jpg">
+
+            <h3>CALLE REAL</h3>
+
+            <p> A historic street in Iloilo City lined with beautifully restored Spanish and American-era heritage buildings.
+                           </p>
+
+            <a href="https://share.google/f13y0702wt8tvF89Y">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/MANJUYOD%20SANDBAR.jpg">
+
+            <h3>MANJUYOD SAND BAR</h3>
+
+            <p>  popular resort beach in Siquijor known for its built-in concrete cliff-jumping platforms dropping straight into clear blue water.
+                           </p>
+
+            <a href="https://share.google/uYBlk4cvB9hzkjdPV">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/Balete%20tree%20in%20Lazi,.jpg">
+
+            <h3>BALETE TREE, SIQUIJOR</h3>
+
+            <p> A mystical 400-year-old banyan tree with a natural freshwater spring at its base, where small fish gently nibble on visitors' feet.
+                           </p>
+
+            <a href="https://share.google/3cRYvRPX3iIswAKmE">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/san%20pedro.jpg">
+
+            <h3>FORT SAN PEDRO </h3>
+
+            <p>the oldest and smallest triangular bastion fort in the country.                            </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/mararison.jpg">
+
+            <h3>MARARISON ISLAND</h3>
+
+            <p>often called the "Batanes of Western Visayas.
+                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/sachiko.jpg">
+
+            <h3>SACHIKO LITTLE KYOTO</h3>
+
+            <p>highly popular Japanese-themed mountain attraction.
+                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/magellan">
+
+            <h3>MAGELLAN CROSS</h3>
+
+            <p>he historic wooden cross planted by Portuguese explorer Ferdinand Magellan upon his arrival in Cebu in 1521. 
+                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/taoist.jpg">
+
+            <h3>TAOIST TEMPLE</h3>
+
+            <p>Its colorful, multi-tiered classic Chinese architecture. Built by Cebu's prominent Chinese-Filipino community in 1972
+                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/buwakan.jpg">
+
+            <h3>BUWAKAN NI ALEJANDRA</h3>
+
+            <p>A sweeping, multi-tiered mountain flower sanctuary.
+                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/lumpatan.jpg">
+
+            <h3>LUMPATAN BEACH</h3>
+
+            <p>secluded bay flanked by massive volcanic rock structures and clear turquoise water.
+                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/leah.jpg">
+
+            <h3>TEMPLE OF LEAH</h3>
+
+            <p>Being dubbed the "Taj Mahal of Cebu." It is a massive, Roman-inspired palace built in 2012.
+                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/mayana.jpg">
+
+            <h3>MAYANA PEAK</h3>
+
+            <p>Sweeping, dramatic green mountain ridges and a cool highland climate. 
+                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/biri.jpg">
+
+            <h3>BIRI ROCK FORMATION</h3>
+
+            <p>Giant, beautifully sculpted limestone rock pillars carved over millions of years by crashing waves and strong ocean currents. 
+                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/carb.jpg">
+
+            <h3>CARBIN REEF</h3>
+
+            <p>A massive, 200-hectare marine sanctuary featuring a distinct horseshoe-shaped white sandbar. 
+                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/bora.jpg" alt="boracay">
+
+            <h3>BORACAY</h3>
+
+            <p> Is world-renowned for White Beach, which features soft, powder-like white sand that stays cool even under the sun.</p>
+
+
+            <a href="https://share.google/zp6sNmE2lcHY4vfpk">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/bohol.jpg" alt="Bohol">
+
+            <h3>BOHOL</h3>
+
+            <p>most iconic landmark. a massive geological formation of over 1,200 symmetrical, cone-shaped limestone hills.</p>
+
+
+            <a href="https://share.google/wEjFF2mLWQjTgToxA">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/cebu.jpg" alt="cebu">
+
+            <h3>CEBU</h3>
+
+            <p>ultimate gateway to Philippines, blending a metropolitan hub with historic milestones and world-class adventures.</p>
+
+
+            <a href="https://maps.app.goo.gl/dqBmtUZyXsP4EL9o8">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/apo%20island" alt="apo island">
+
+            <h3>APO ISLAND</h3>
+
+            <p>famous for being one of the world's most successful, community-led marine conservation and premier eco-tourism destination.
+</p>
+
+
+            <a href="https://share.google/mOIaVgx2K0Wk3uaQv">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/bcolod.jpg" alt="bacolod">
+
+            <h3>BACOLOD</h3>
+
+            <p>Known across the country as the "City of Smiles," famous for its warm hospitality, sweet sugar history, and exceptional culinary scene.
+</p>
+
+
+            <a href="https://www.google.com/search?kgmid=%2Fm%2F01rmws&hl=en-PH&q=Bacolod&shem=dlvs1%2Cepsd1%2Cesd2e%2Crimspwouoe%2Csdpie&shndl=17&source=sh%2Fx%2Fkp%2Fosrp%2Fm5%2F1&kgs=3bb8ab9d75061d32">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/iloilo.jpg" alt="iloilo">
+
+            <h3>ILOILO</h3>
+
+            <p>celebrated as a majestic cultural haven, widely appreciated for its soft-spoken people, and its meticulously preserved heritage architecture.</p>
+
+
+            <a href="https://share.google/GO5haFqZh4L1TAL1O">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/siquijr.jpg" alt="siquijor">
+
+            <h3>SIQUIJOR</h3>
+
+            <p>celebrated as the "Mystic Island" due to its deep-rooted spiritual folklore, which seamlessly blends with breath-taking natural wonders.
+</p>
+
+
+            <a href="https://share.google/9sywmn5R30hfuYaSw">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/guimaras.jpg" alt="guimaras">
+
+            <h3>GUIMARAS</h3>
+
+            <p>Guimaras is universally celebrated as the "Mango Capital of the Philippines",known for its agricultural pride and wonderfully laid-back eco-tourism charm.
+</p>
+
+
+            <a href="https://share.google/r2IXiU3wuebPiHu8R">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<center>
+<br><br>
+</div>
+<br><br>
+        <font color="pink" size="7">●</font>
+        <font color="gray" size="6">●</font>
+        <font color="brown" size="5">●</font>
+        <font color="Gray" size="7">
+            Mindanao Features
+        </font>
+
+        <br><br>
+
+           </center>
+<div class="carousel" id="mindanaoCarousel">
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/The%20Sunken%20Cemetery,%20during%20the%20volcanic%20birth%20of%E2%80%A6.jpg">
+
+            <h3>THE SUNKEN CEMETERY</h3>
+
+            <p>Marked by a massive white cross rising from the sea over a town submerged by volcanic eruption.                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/Awesome%20Divine%20Mercy%20Shrine%20in%20El%20Salvador.jpg">
+
+            <h3>DIVINE MERCY SHRINE</h3>
+
+            <p> A pilgrimage site anchored by a 50-foot statue of Jesus overlooking Macajalar Bay.                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/Communal%20Ranch,%20Bukidnon,%20Philippines%20%E2%9C%A8.jpg">
+
+            <h3>COMMUNAL RANCH</h3>
+
+            <p> Rolling green pastures offering horseback riding and panoramic mountain views.                          </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/U_S.T.%20Lovers'%20Lane,%20Manila">
+
+            <h3>LOVERS LANE</h3>
+
+            <p> A scenic ridge trail lined with pine trees overlooking vast valleys.                          </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/The%20Vanishing%20Island.jpg">
+
+            <h3>VANISHING ISLAND</h3>
+
+            <p>A shifting sandbar that disappears during high tide and emerges as a wide white beach at low tide.                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/Mount%20Hamiguitan%20Range%20Wildlife%20Sanctuary.jpg">
+
+            <h3>MT. HAMIGUITAN</h3>
+
+            <p>A UNESCO World Heritage Site famous for its ancient pygmy bonsai forest.                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/Sleeping%20Dinosaur%20in%20Mati.jpg">
+
+            <h3>SLEEPING DINOSAUR</h3>
+
+            <p>  A coastal peninsula shaped remarkably like a sleeping plesiosaur.                         </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/Tree%20House%20in%20Pasonanca%20Park,%20Zamboanga%20City.jpg">
+
+            <h3>PASONANCA PARK</h3>
+
+            <p>  A sprawling natural park featuring a famous treehouse, aviary, and natural spring pools.                          </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/seven.jpg">
+
+            <h3>SEVEN SEAS WATER PARK</h3>
+
+            <p>the first world-class pirate-themed waterpark in the Philippines, famous for its massive wave pools, high-speed water slides
+                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/holon.jpg">
+
+            <h3>LAKE HOLON</h3>
+
+            <p>
+                   Lake Holon in T'boli, South Cotabato, is famously known as the "Crown Jewel of the South". </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/pearl">
+
+            <h3>PEARL FARM</h3>
+
+            <p>
+                   famous for its rich history as a former South Sea pearl cultivation farm and its iconic luxury island architecture.</p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div><div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/eden.jpg">
+
+            <h3>EDEN NATURE PARK</h3>
+
+            <p>an 80-hectare man-made ecotourism destination and mountain resort located in the foothills of Mount Talomo in Toril, Davao City.
+                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/EAGLE.jpg">
+
+            <h3>EAGLE CENTER</h3>
+
+            <p>Popular urban and conservation stops showcasing local biodiversity and regional culture.
+                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/pimk.jpg">
+
+            <h3>PINK BEACH</h3>
+
+            <p>Famous for its natural pinkish sand caused by crushed red coral fragments.
+                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/White%20Water%20RaftiNG.jpg">
+
+            <h3>WHITE WATER RAFTING</h3>
+
+            <p> An exhilarating rapids-riding adventure along the Cagayan River.
+                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/MARIA%20.jpg">
+
+            <h3>MARIA CHRISTINA WATER FALLS</h3>
+
+            <p> Iconic waterfalls known for their raw power and hidden emerald lagoons.
+                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/grnd%20mos.jpg">
+
+            <h3>GRAND MOSQUE</h3>
+
+            <p>The largest mosque in the country, symbolizing peace and Islamic architecture.
+                           </p>
+
+            <a href="">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/siargao.jpg" alt="siargao">
+
+            <h3>SIARGAO</h3>
+
+            <p>world-famous for its powerful reef breaks, most notably the legendary Cloud 9 tube wave in General Luna.</p>
+
+
+            <a href="https://share.google/o17BgfZobvNOByYMw">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/hinatuan.jpg" alt="hinatuan">
+
+            <h3>HINATUAN</h3>
+
+            <p>regarded as one of the most mysterious and visually stunning natural bodies of water in the world.</p>
+
+
+            <a href="https://share.google/2IpOi9zXloFIevgg8">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/camiguin.jpg" alt="camiguin">
+
+            <h3>CAMIGUIN</h3>
+
+            <p>the "Island Born of Fire". earns this fascinating nickname because it contains more volcanoes per square kilometer.</p>
+
+
+            <a href="https://share.google/Ju85RSZjbWesrYOW9">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/zamboanga.jpg" alt="zamboanga">
+
+            <h3>ZAMBOANGA</h3>
+
+            <p>universally famous across the archipelago for its deep Spanish colonial roots, distinct cultural, and vibrant coastal landmarks.</p>
+
+
+            <a href="https://share.google/P24wjdJRG3sXc2a76">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/dahilayan.jpg" alt="dahilayan">
+
+            <h3>DAHILAYAN</h3>
+
+            <p>the "Adventure Capital of Mindanao". Because of its high altitude, crisp "sweater weather" and dense pine tree scenery.</p>
+
+
+            <a href="https://share.google/AB3N8E9w4d2wTAl7F">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/samal.jpg" alt="samal">
+
+            <h3>SAMAL</h3>
+
+            <p>"Beach Playground of Davao". a beautiful tropical escape from the nearby city, globally and locally famous for several major.</p>
+
+
+            <a href="https://share.google/sN0kfrtTxTeuX93FH">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/DAVAO" alt="davao">
+
+            <h3>DAVAO</h3>
+
+            <p>Known as the "King City of the South," famous for its clean streets, strict local laws, and unique wildlife conservation.</p>
+
+
+            <a href="https://share.google/WYUD5fyGFoXvDixNX">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/MT.APO.tmp
+
+" alt="Mt apo">
+
+            <h3>MT.APO</h3>
+
+            <p>universally legendary in the outdoor world, holding the status as the absolute "Grandfather of Philippine Mountains.</p>
+
+
+            <a href="https://share.google/4uNPARp338HEsU4Z6">
+                EXPLORE MORE
+            </a>
+
+        </div>
+<center>
+<br><br>
+</div>
+
+<h2 class="section-title">Filipino Culture & Traditions</h2>
+
+    <p class="description">
+    Discover the traditions and customs that make the Philippines unique.
+    </p>
+
+
+<div class="hero">
+  
+
+    <p>
+    Experience the Philippines through its rich traditions,
+    delicious cuisine, and refreshing local beverages.
+    Discover how Filipino culture brings people together
+    through celebrations, hospitality, and unforgettable flavors.
+    </p>
+</div>
+
+    <br><br>
+        <font color="pink" size="7">●</font>
+        <font color="gray" size="6">●</font>
+        <font color="brown" size="5">●</font>
+        <font id="culture" color="Gray" size="7">
+            Culture and Heritage      </font>
+
+        <br><br>
+
+           </center>
+
+    
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/OL.jpg">
+
+            <h3>FESTIVALS</h3>
+
+                        <a href="file:///C:/Users/HP/Desktop/ELAINE/Festdetails.html#">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/FOODS.jpg">
+
+            <h3>MUST TRY</h3>
+
+            
+            <a href="file:///C:/Users/HP/Desktop/ELAINE/foods.html">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+<div class="destination">
+
+            <img src="file:///C:/Users/HP/Downloads/CULTURE.jpg">
+
+            <h3>CULTURE</h3>
+
+            
+            <a href="file:///C:/Users/HP/Desktop/ELAINE/culture.html">
+                EXPLORE MORE
+            </a>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+    
+
+   
+    
+    <div class="inspiration">
+
+        <h2>Every Journey Tells a Story</h2>
+
+        <p>
+Thank you for choosing Tourly. We trust your journey was exceptional in every way. Wherever the world takes you next, we look forward to guiding you in comfort and style. Safe travels home.
+            Find your next destination.
+            Create beautiful memories.
+            Discover something new.
+        </p>
+
+    </div>
+
+    
+    
+    
+    <footer>
+
+       
+        <p>PHILIPPINES TRAVEL GUIDE</p>
+        <p>&copy; 2026 TOURLY. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+</html>

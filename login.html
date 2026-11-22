@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+   
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f5f6;
+            color: #555;
+        }
+
+          
+        .container {
+            width: 700px;
+            margin: 50px auto;
+            display: flex;
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 18px #e5dfe2;
+        }
+.social-button {
+text-decoration: none;
+}
+        .welcome {
+            width: 50%;
+            background-color: white;
+            padding: 45px 35px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .welcome h1 {
+            color: gray;
+            font-size: 29px;
+        }
+
+        .welcome p {
+            color: #777;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .welcome img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .login {
+            width: 50%;
+            padding: 45px 40px;
+            box-sizing: border-box;
+        }
+
+        .login h2 {
+            text-align: center;
+            color: #bd8098;
+            font-size: 27px;
+        }
+
+        .login p {
+            text-align: center;
+            color: #999;
+            font-size: 13px;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #ddd;
+            border-radius: 7px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #ce91a9;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 7px;
+            background-color: #ce91a9;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #b87994;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #aaa;
+            font-size: 12px;
+            margin: 22px 0;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background-color: #eee;
+        }
+
+        .social-button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 12px;
+            border: 1px solid #ddd;
+            border-radius: 7px;
+            background-color: white;
+            color: #666;
+            font-size: 14px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        .social-button:hover {
+            background-color: #f8e9ee;
+            border-color: #ce91a9;
+        }
+
+                
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #aaa;
+            font-size: 12px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<div class="container">
+
+    <div class="welcome">
+
+        <h1>Welcome to TOURLY!</h1>
+
+        <p>
+            Your next adventure begins here.
+            Discover the beauty of the Philippines,
+            explore amazing destinations, and find
+            helpful travel guides for your journey.
+        </p>
+
+        <img src="file:///C:/Users/HP/Downloads/nkj.jpg" alt="Philippines destination">
+
+        <p><b>Explore. Discover. Experience.</b></p>
+
+    </div>
+
+    <div class="login">
+
+        <h2>Log In</h2>
+
+        <p>Welcome back! Continue your travel journey.</p>
+
+        <form action="file:///C:/Users/HP/Desktop/ELAINE/website.html">
+
+            <label>Email Address</label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password" required>
+
+            <button type="submit">Log In</button>
+        </form>
+
+        <div class="divider">OR CONTINUE WITH</div>
+
+       <a href="file:///C:/Users/HP/Desktop/ELAINE/continue.html" target="_blank" class="social-button gmail">
+  <img src="file:///C:/Users/HP/Downloads/gm.png" alt="Gmail logo" height="20" width="20">
+   Continue with Gmail
+</a>
+
+<a href="file:///C:/Users/HP/Desktop/ELAINE/continue.html" target="_blank" class="social-button facebook">
+  <img src="file:///C:/Users/HP/Downloads/fb.png" alt="Gmail logo" height="20" width="20">
+   Continue with Facebook
+</a>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 TOURLY Philippines Travel Guide. All Rights Reserved.
+</footer>
+
+<script>
+
+    function socialLogin(event) {
+        event.preventDefault();
+
+        alert("Welcome to TOURLY! Your adventure starts here.");
+
+        window.location.href = "file:///C:/Users/HP/Desktop/ELAINE/website.html
+";
+    }
+
+    
+</script>
+
+</body>
+</html>
